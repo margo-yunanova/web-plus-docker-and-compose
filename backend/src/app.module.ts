@@ -26,7 +26,7 @@ const { POSTGRES_PASSWORD, POSTGRES_DB, POSTGRES_USER, POSTGRES_HOST } =
       password: POSTGRES_PASSWORD,
       database: POSTGRES_DB,
       entities: ["dist/*/entities/*.entity.js"],
-      schema: "nest_project",
+      schema: "public",
       synchronize: true,
       //logging: true,
     }),
