@@ -16,6 +16,8 @@ services:
       retries: 3
       start_period: 40s
     env_file: .env
+    networks:
+      - backend
   frontend:
     build: 
       context: frontend
@@ -29,3 +31,7 @@ services:
     volumes:
       - ./pg-data:/var/lib/postgresql/data
     restart: on-failure
+    networks:
+      - backend
+networks:
+  backend:
